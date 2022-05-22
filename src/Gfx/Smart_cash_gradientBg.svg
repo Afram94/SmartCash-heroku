@@ -1,0 +1,27 @@
+<svg width="2240" height="840" viewBox="0 0 2400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0H4000L0 720V0Z" fill="url(#paint0_linear_2_3)"/>
+  <defs>
+  <linearGradient id="paint0_linear_2_3" x1="-232" y1="-208.5" x2="1638.5" y2="644" gradientUnits="userSpaceOnUse" gradientTransform="rotate(65)">
+    <stop stop-color="#ed24dc">
+      <animate attributeName="offset" dur="10s" values="0; 0.1; 0.3; 0.4; 0.3; 0;" repeatCount="indefinite" id="paint0_linear_2_3-test" />
+    </stop>
+    <stop id="test" offset="1" stop-color="#962896">
+      <animate attributeName="offset" dur="10s" values="1; 0.9; 0.8; 0.5; 0.8; 0.9; 1;" repeatCount="indefinite" id="paint0_linear_2_3-test" />
+    </stop>
+  </linearGradient>
+  </defs>
+</svg>
+<!-- <svg width="2240" height="840" viewBox="0 0 2400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0H4000L0 720V0Z" fill="url(#paint0_linear_2_3)"/>
+  <defs>
+  <linearGradient id="paint0_linear_2_3" x1="-232" y1="-208.5" x2="1638.5" y2="644" gradientUnits="userSpaceOnUse" gradientTransform="rotate(65)">
+    <stop stop-color="#ed24dc">
+      <animate attributeName="offset" dur="10s" values="0; 0.1; 0.3; 0.4; 0.3; 0;" repeatCount="indefinite" id="paint0_linear_2_3-test" />
+    </stop>
+    <stop id="test" offset="1" stop-color="#962896">
+      <animate attributeName="offset" dur="10s" values="1; 0.9; 0.8; 0.5; 0.8; 0.9; 1;" repeatCount="indefinite" id="paint0_linear_2_3-test" />
+    </stop>
+  </linearGradient>
+  </defs>
+</svg>
+ -->
