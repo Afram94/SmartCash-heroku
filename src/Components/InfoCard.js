@@ -17,7 +17,7 @@ export default function InfoCard(props) {
                     </div>
                 </div>
                 <div className={"mt-52 row-span-3 flex justify-start h-[42px] mb-8 " + " " + (props.css) + " " + (props.check == "0" ? 'hidden' : '')}>
-                      <button className="flex items-center bg-white  py-[12px] px-4 rounded-md w-[180px] font-bold text-[#962896] hover:bg-[#F01E82] hover:text-white text-center justify-center font-lato " >Läs mer <div className="mt-1 ml-4"> <AiOutlineArrowRight /> </div> </button>
+                      <button className="relative flex items-center bg-white  py-[12px] px-4 rounded-md w-[180px] font-bold text-[#962896] hover:bg-[#F01E82] hover:text-white text-center justify-center font-lato " >Läs mer <div className="mt-1 ml-4"> <AiOutlineArrowRight /> </div> </button>
                 </div>
             
         {/* </div> */}
