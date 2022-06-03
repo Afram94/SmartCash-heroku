@@ -11,7 +11,7 @@ export default function Home() {
     <Std_Master img={bild_1} inner={
       <div>
 
-        <div className="z-10 max-w-7xl mx-auto pl-4 pr-8 sm:px-6 lg:px-8">
+        <div className="z-10 max-w-7xl mx-auto pl-4 pr-8 sm:px-6 lg:px-8 font-lato">
           <h1 className="text-4xl sm:ml-10 mx-5 font-extrabold text-warm-gray-900 sm:text-4xl lg:text-4xl">Kontakta oss</h1>
           <p className="mt-6 sm:ml-11 ml-6 text-xl text-warm-gray-500 max-w-3xl"> Vi ser fram emot att höra från dig </p>
         </div>
@@ -23,7 +23,7 @@ export default function Home() {
 
         <div className="w-full flex justify-center">
           <div className="w-full md:w-3/5 grid-rows-3">
-            <div className="row-span-1 flex justify-center items-center flex-col text-center my-4 ">
+            <div className="row-span-1 flex justify-center items-center flex-col text-center my-4 font-lato">
               <p className="text-3xl font-extrabold tracking-tight sm:text-4xl">Smartcash</p>
               <p className="text-text-xl text-gray-500">Ornare sagittis, suspendisse in hendrerit quis. Sed dui aliquet lectus sit pretium egestas vel mattis neque.</p>
             </div>

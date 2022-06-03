@@ -26,6 +26,24 @@ import kund_4 from "../Gfx/kund_4.png"
 import kund_5 from "../Gfx/kund_5.png"
 import kund_6 from "../Gfx/kund_6.jpeg"
 import kund_7 from "../Gfx/kund_7.jpeg"
+import kund_8 from "../Gfx/kund_8.png"
+import kund_9 from "../Gfx/kund_9.webp"
+import kund_10 from "../Gfx/kund_10.jpg"
+import kund_11 from "../Gfx/kund_11.png"
+import kund_12 from "../Gfx/kund_12.png"
+import kund_13 from "../Gfx/kund_13.jpg"
+import bild_100 from "../Gfx/bild_100.jpg"
+import bild_101 from "../Gfx/bild_101.png"
+import bild_102 from "../Gfx/bild_102.png"
+import bild_103 from "../Gfx/bild_103.png"
+import bild_104 from "../Gfx/bild_104.png"
+import Grocery from "../Gfx/Grocery.png"
+import test_100 from "../Gfx/test_100.png"
+import test_101 from "../Gfx/test_101.png"
+
+import bild_111 from "../Gfx/bild_111.png"
+import bild_222 from "../Gfx/bild_222.png"
+import bild_333 from "../Gfx/bild_333.png"
 
 import Card from '../Components/Card';
 import Desc from '../Components/Desc';
@@ -39,9 +57,10 @@ import Loading from "../Gfx/Loading.gif";
 export default function Home() {
 
   const [count, setCount] = useState(0);
+  const [transactionCount, setTransactionCount] = useState(950000);
+  const [get_x, setGet_x] = useState(0)
 
-  useEffect(() => {
-
+  function ActiveCustomer(){
     var initialDate = new Date(2007, 10, 4);
     var now = Date.now();
     var difference = now - initialDate;
@@ -59,34 +78,57 @@ export default function Home() {
         }
         setCount(timesRun)
         //do whatever here..
-
-        
     }, ); 
+  }
 
-    
-  }, []);
-  
+  function Transition(){
+    var initialDate = new Date(-700, 10, 4);
+    var now = Date.now();
+    var difference = now - initialDate;
+    var millisecondsPerDay = 24 * 60 * 60 * 1000;
+    var daysSince = Math.floor(difference / millisecondsPerDay);
+
+
+    var timesRun = 0;
+    var interval = setInterval(function(){
+        timesRun += 1822;
+        if(timesRun >= daysSince){
+            clearInterval(interval);
+        }else if(timesRun > 1100000){ // to stop the infinite loop in case we have a bug
+          clearInterval(interval);
+        }
+        setTransactionCount(timesRun)
+        //do whatever here..
+    }, ); 
+  }
+
+  useEffect(() => {
+    ActiveCustomer();
+    Transition();
+  },[]);
 
   return(
-    <Std_Master Title="Smarta Betallösningar" img={bild_1} inner={
+    <Std_Master Title="Smarta Betallösningar" img={test_101} inner={
     <div>
-      <div className="xl:block hidden absolute 2xl:top-[600px] 2xl:left-[1000px] xl:top-[450px] xl:left-[700px] bg-no-repeat bg-cover w-[500px] h-[200px] text-bold text-[28px] font-lato ">
-        <div className="grid grid-cols-3 w-[700px]">
-          <div className="col-span-1 border-r border-l font-lato text-[#F85DA7]">
-            <div className="flex justify-center items-center text-center"> <MdSentimentVerySatisfied /></div>
-            <div className="flex justify-center items-center text-center"> Aktiva kunder</div>
-            <div className="ml-[80px]">{count}</div>
+      <div className=" xl:block hidden absolute 2xl:top-[570px] 2xl:left-[1120px] xl:top-[580px] xl:left-[660px] big_screen:left-[2160px] big_screen:top-[760px] bg-no-repeat bg-cover w-[500px] h-[200px] text-bold text-[28px] font-lato ">
+      
+      
+        <div className="grid grid-cols-3 w-[700px] big_screen:w-[800px]">
+          <div className="col-span-1 border-r border-l font-lato text-gray-700">
+            {/* <div className="flex justify-center items-center text-center"> <MdSentimentVerySatisfied /></div> */}
+            <div className="flex justify-center items-center text-center text-[20px] big_screen:text-[30px]"> Aktiva kunder</div>
+            <div className="ml-[90px] text-[20px] big_screen:text-[30px]">{count}</div>
           </div>
           
-          <div className="col-span-1 border-r font-lato text-[#962896]">
-            <div className="flex justify-center items-center text-center">Aktiva kunder</div>
-            <div className="ml-[80px]">{count}</div>
+          <div className="col-span-1 border-r font-lato text-gray-700">
+            <div className="flex justify-center items-center text-center text-[20px] big_screen:text-[30px]">Antal transitioner</div>
+            <div className="ml-[80px] text-[20px] big_screen:text-[30px]">{transactionCount}</div>
           </div>
           
           
-          <div className="col-span-1 border-r font-lato ">
-            <div className="flex justify-center items-center text-center">Aktiva kunder</div>
-            <div className="ml-[80px]">{count}</div>
+          <div className="col-span-1 border-r font-lato text-gray-700">
+            <div className="flex justify-center items-center text-center text-[20px] big_screen:text-[30px]">Aktiva kunder</div>
+            <div className="ml-[90px] text-[20px] big_screen:text-[30px]">{count}</div>
           </div>
           
         </div>
@@ -109,17 +151,17 @@ export default function Home() {
         <div className='py-4 flex grid-cols-5 flex-wrap justify-center gap-x-6'>
           <div className='col-start-2 col-span-1 lg:relative'>
             <Link to="/restaurant-and-cafe">
-              <InfoCard main_css={"w-[350px] h-[450px]"} content_css={"mt-48"} check={"1"} img={Group_24} title_2={"RESTAURANG & CAFE"} description={"Defining this explicitly"}/>
+              <InfoCard main_css={"md:w-[350px] md:h-[450px] w-[250px] h-[350px]"} css={"md:mt-52 mt-36"} content_css={"md:mt-48 mt-32"} check={"1"} img={bild_111} /* bild_101 */ title_2={"RESTAURANG & CAFE"} description={"Defining this explicitly"}/>
             </Link>
           </div>
           <div className='col-start-2 col-span-1 lg:relative'>
             <Link to="/beauty-and-health">
-              <InfoCard main_css={"w-[350px] h-[450px]"} content_css={"mt-48"} check={"1"} img={Group_25} title_2={"SKÖNHET & HÄLSA"} description={"Defining this explicitly"}/>
+              <InfoCard main_css={"md:w-[350px] md:h-[450px] w-[250px] h-[350px]"} css={"md:mt-52 mt-36"} content_css={"md:mt-48 mt-32"} check={"1"} img={bild_222}  /*bild_104 bild_102  Group_25 */ title_2={"SKÖNHET & HÄLSA"} description={"Defining this explicitly"}/>
             </Link>
           </div>
           <div className='col-start-2 col-span-1 lg:relative'>
             <Link to="/grocery-stores">
-              <InfoCard main_css={"w-[350px] h-[450px]"} content_css={"mt-48"} check={"1"} img={Group_23} title_2={"Livsmedel & Kiosk"} description={"Defining this explicitly"}/>
+              <InfoCard main_css={"md:w-[350px] md:h-[450px] w-[250px] h-[350px]"} css={"md:mt-52 mt-36"} content_css={"md:mt-48 mt-32"} check={"1"} img={bild_333} /* Grocery bild_103 Group_23 */ title_2={"LIVSMEDEL & KIOSK"} description={"Defining this explicitly"}/>
             </Link>
           </div>
           {/* <div className='col-start-3 col-span-1'>
@@ -137,7 +179,7 @@ export default function Home() {
 
       <div className='h-24 md:h-44' />
       
-      <div className='w-full grid-cols-8 hidden lg:grid bg-gradient-to-tr from-[#F85DA7] via-[#FB58A5] to-[#F41F84] skew-y-12 h-[400px]'> {/* i have fixed height because i have the gif with fixed height and width */}
+      <div className='w-full grid-cols-8 hidden xl:grid bg-gradient-to-tr bg-[#F01E82] skew-y-12 h-[400px]'> {/* i have fixed height because i have the gif with fixed height and width */}
         <div className='col-start-2 col-span-2 xl:pt-8 flex items-center -skew-y-12'>
           <Desc />
         </div>
@@ -156,46 +198,87 @@ export default function Home() {
         
         </div> */}
       </div>
-      <div className='w-full h-[250px] lg:hidden grid  '>
-        <div className='w-full h-full bg-contain md:bg-cover bg-no-repeat rounded-t-2xl z-0 lg:bg-red-500 flex md:ml-0 ml-4'
+      <div className='w-full lg:h-[450px] h-[250px] xl:hidden grid'>
+        <div className='w-full h-full lg:w-full lg:h-[420px] bg-contain md:bg-cover bg-no-repeat rounded-t-2xl z-0 flex items-center justify-center' /* iphone_12_pro:w-[390px] iphone_12_pro:h-[390px] */
              style={{backgroundImage: "url(" + bild_enox + ")"}}/>
-        <div className="z-10 absolute mt-8 flex justify-center w-full">
+        <div className="z-10 absolute mt-14 lg:mt-[400px] flex justify-center w-full">
           <Desc />
         </div>
       </div>
 
       <div className='h-24 md:h-44' />
 
-      <div className="border-b-2 my-12">
-        <h2 class="relative text-center text-lg sm:text-4xl uppercase font-extrabold text-gray-900 tracking-tight mt-40 md:mt-16"> Några av våra kunder </h2>
-        {/* <div className='h-24 md:h-44' /> */}
-        <div className="grid md:grid-cols-8 grid-cols-1 md:mx-48 mx-32 my-12 gap-x-24 relative justify-center">
+      <div className="lg:my-12 border-b-2">
+        <h2 class="relative text-center text-lg sm:text-4xl uppercase font-extrabold text-gray-900 tracking-tight mt-44 md:mt-16 font-lato"> Några av våra kunder </h2>
+        
+        <div className="grid xl:grid-cols-9 sm:grid-cols-5 grid-cols-2 lg:mx-48 mx-12 my-12 sm:gap-x-12 gap-x-8 ">
           <div className="col-span-1 my-1">
-            <div className="border-2 w-[160px] h-[160px] sm:w-[100px] sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_1 + ")"}}/>
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_1 + ")"}}/>
           </div>
           <div className="col-span-1 my-1">
-            <div className="border-2 w-[160px] h-[160px] sm:w-[100px] sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_2 + ")"}}/>
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_2 + ")"}}/>
           </div>
           <div className="col-span-1 my-1">
-            <div className="border-2 w-[160px] h-[160px] sm:w-[100px] sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_3 + ")"}}/>
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_3 + ")"}}/>
           </div>
           <div className="col-span-1 my-1">
-            <div className="border-2 w-[160px] h-[160px] sm:w-[100px] sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_4 + ")"}}/>
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_4 + ")"}}/>
           </div>
           <div className="col-span-1 my-1">
-            <div className="border-2 w-[160px] h-[160px] sm:w-[100px] sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_5 + ")"}}/>
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_5 + ")"}}/>
           </div>
           <div className="col-span-1 my-1">
-            <div className="border-2 w-[160px] h-[160px] sm:w-[100px] sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_6 + ")"}}/>
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_6 + ")"}}/>
           </div>
           <div className="col-span-1 my-1">
-            <div className="border-2 w-[160px] h-[160px] sm:w-[100px] sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_7 + ")"}}/>
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_7 + ")"}}/>
           </div>
           <div className="col-span-1 my-1">
-            <div className="border-2 w-[160px] h-[160px] sm:w-[100px] sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_7 + ")"}}/>
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-contain bg-no-repeat bg-center" style={{backgroundImage: "url(" + kund_8 + ")"}}/>
           </div>
+          
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-contain bg-no-repeat bg-center" style={{backgroundImage: "url(" + kund_9 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center big_screen:ml-[850px] xl:ml-[450px] md:hidden 2xl:block" style={{backgroundImage: "url(" + kund_10 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-contain bg-no-repeat bg-center big_screen:ml-[850px] xl:ml-[450px] sm:ml-[150px] md:hidden 2xl:block" style={{backgroundImage: "url(" + kund_11 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-contain bg-no-repeat bg-center big_screen:ml-[850px] xl:ml-[450px] sm:ml-[150px] bg-black md:hidden 2xl:block" style={{backgroundImage: "url(" + kund_12 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center big_screen:ml-[850px] xl:ml-[450px] sm:ml-[150px] ml-[70px] md:hidden 2xl:block" style={{backgroundImage: "url(" + kund_13 + ")"}}/>
+          </div>
+          
         </div>
       </div>
+      {/* <div className="border-b-2 my-12">
+        
+        
+        <div className="grid md:grid-cols-7 grid-cols-1 md:mx-48 mx-32 my-12 gap-x-24 relative justify-center">
+          
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[160px] h-[160px] sm:w-[100px] sm:h-[100px] rounded-full bg-contain bg-no-repeat bg-center" style={{backgroundImage: "url(" + kund_9 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[160px] h-[160px] sm:w-[100px] sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_10 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[160px] h-[160px] sm:w-[100px] sm:h-[100px] rounded-full bg-contain bg-no-repeat bg-center" style={{backgroundImage: "url(" + kund_11 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[160px] h-[160px] sm:w-[100px] sm:h-[100px] rounded-full bg-contain bg-no-repeat bg-center bg-black" style={{backgroundImage: "url(" + kund_12 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[160px] h-[160px] sm:w-[100px] sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_13 + ")"}}/>
+          </div>
+          
+          
+        </div>
+      </div> */}
 
       {/* <div className='relative w-full h-[800px] md:h-[1200px] grid grid-cols-4 '> */}
       <div className='lg:block hidden'>

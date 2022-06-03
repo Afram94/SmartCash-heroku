@@ -10,6 +10,7 @@ import Group_16 from '../Gfx/Group_16.png'
 import bg_kontakt_card from '../Gfx/bg_kontakt_card.png'
 import Sigill_rosa from '../Gfx/Sigill_rosa.png'
 
+
 export default function Kontakt_card() {
   const [name, setName] = useState("")
   const [lastName, setLastName] = useState("")
@@ -46,7 +47,7 @@ export default function Kontakt_card() {
             <div className="lg:block hidden relative bg-gray-100 w-[1000px] h-[700px] rounded-lg mt-10 bg-cover" style={{backgroundImage: "url(" + bg_kontakt_card + ")"}}>
                     <div className="">
                     <div className="bg-gray-50 w-[800px] h-[500px] mt-[100px] mx-[100px] ease-in-out hover:shadow-2xl rounded-lg py-6">
-                        <div className="grid grid-cols-4" /* style={{backgroundImage: "url(" + group_8 + ")"}} */>
+                        <div className="grid grid-cols-4 mx-12" /* style={{backgroundImage: "url(" + group_8 + ")"}} */>
                         <div className="absolute top-[-40px] left-0 z-10 w-[75px] h-[75px] mt-[100px] mx-[460px] shadow-lg ease-in-out hover:shadow-2xl rounded-full py-6 bg-cover boreder-2 border-black-" style={{backgroundImage: "url(" + Sigill_rosa + ")"}}></div>
                             <div className="flex justify-center col-span-4 text-center">
                                 <h2 className="flex justify-center text-gray-800 text-2xl font-bold tracking-tight mt-4 font-lato">
@@ -58,22 +59,22 @@ export default function Kontakt_card() {
                                     Vi ringer up dig
                                 </h2>
                             </div>
-                            <div className="col-span-2 px-2 mx-2 w-full">
-                                <Inputfield_std value={(e)=>{setName(e)}} placeholder="First name" className="w-full text-xs rounded-md px-2" />
+                            <div className="col-span-2 px-2 w-full">
+                                <Inputfield_std value={(e)=>{setName(e)}} placeholder="NAMN/FÖRETAG" className="w-full text-xs rounded-md px-2" />
                             </div>
-                            <div className="col-span-2 px-2 mx-2 w-full">    
-                                <Inputfield_std value={(e)=>{setLastName(e)}} placeholder="Last name" className="w-full text-xs rounded-md px-2" />
+                            <div className="col-span-2 px-2 w-full">    
+                                <Inputfield_std value={(e)=>{setLastName(e)}} placeholder="EFTERNAMN/FÖRETAG" className="w-full text-xs rounded-md px-2" />
                             </div>
                             
-                            <div className="col-span-2 px-2 mx-2 w-full py-6">
-                                <Inputfield_std value={(e)=>{setEmail(e)}} placeholder="Email" className="w-full text-xs rounded-md px-2" />
+                            <div className="col-span-2 px-2 w-full py-6">
+                                <Inputfield_std value={(e)=>{setEmail(e)}} placeholder="E-POST" className="w-full text-xs rounded-md px-2" />
                             </div>
-                            <div className="col-span-2 px-2 mx-2 w-full py-6">
-                                <Inputfield_std value={(e)=>{setPhone(e)}} placeholder="Phone" className="w-full text-xs rounded-md px-2" />
+                            <div className="col-span-2 px-2 w-full py-6">
+                                <Inputfield_std value={(e)=>{setPhone(e)}} placeholder="TELEFON" className="w-full text-xs rounded-md px-2" />
                             </div>
 
                             <div className="col-span-4 px-2 mx-2 py-6">
-                              <textarea onChange={(e)=>{setMsg(e.target.value)}} rows="4" placeholder="Meddelande" className="w-[400px] resize-none p-2 text-xs shadow-md focus:ring-gray-300 focus:border-gray-300 border-gray-100 rounded-md px-2" />
+                              <textarea onChange={(e)=>{setMsg(e.target.value)}} rows="4" placeholder="MEDDELANDE" className="w-[400px] resize-none p-2 text-xs shadow-md focus:ring-gray-300 focus:border-gray-300 border-gray-100 rounded-md px-2" />
                                 <div className="col-span-4 py-8 flex justify-center">
                                     {/* <button className="flex justify-center bg-[#F01E82] text-white py-[8px] px-4 rounded-md w-[220px]" >Skicka</button> */}
                                     <Btn_std ClassName={ name.length && lastName.length && email.length && email.length && msg.length != 0 ? "flex bg-[#F01E82] text-white py-[6px] px-4 rounded-md w-[200px] font-medium pt-2" : "opacity-25 cursor-not-allowed"} trigger={ name.length && lastName.length && email.length && email.length && msg.length != 0 ? () => sendEmail() : console.log("Empty input")} inner={"Skicka"} />

@@ -15,7 +15,7 @@ export default function Home() {
           <InlosenAvtal_Card />
         </div>
 
-        <div className='w-full flex justify-center'>
+        <div className='w-full flex justify-center font-lato'>
           <div className='grid-cols-2 w-full 2md:w-3/4 md:h-[22vw] 2md:h-[200px] lg:h-[450px] flex-wrap flex lg:grid flex-row mt-8 md:mt-16'>
             <div className='col-start-1 col-span-1 flex flex-col px-4 md:px-24 justify-center'>
               <h3 className='text-left text-3xl font-extrabold tracking-tight text-gray-900'>Ett inlösenavtal som täcker alla behov</h3>
@@ -29,7 +29,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='w-full flex justify-center my-32'>
+        <div className='w-full flex justify-center my-32 font-lato'>
           <div className='grid-cols-2 w-full 2md:w-3/4 md:h-[22vw] 2md:h-[200px] lg:h-[450px] flex-wrap flex lg:grid flex-row mt-8 md:mt-16'>
             <div className='col-start-1 col-span-1 flex flex-col px-4 md:px-24 justify-center'>
               <h3 className='text-left text-3xl font-extrabold tracking-tight text-gray-900'>Ett inlösenavtal som täcker alla behov</h3>

@@ -100,10 +100,10 @@ export default function CheckOut() {
         <Side_Master inner={
     <div className="flex justify-center" >
         <div className="grid md:grid-cols-7 grid-cols-1 h-auto w-[1200px] font-lato">
-        <div className="md:col-span-7 col-span-1 h-[100px] font-bold flex justify-center py-8 text-3xl text-[#F01E82]">Check out</div>
+        <div className="md:col-span-7 col-span-1 h-[100px] font-bold flex justify-center py-8 text-3xl text-[#F01E82]">Utcheckning</div>
             <div className="relative col-span-4 mx-4 flex justify-center py-4 shadow-lg my-2 ease-in-out hover:shadow-2xl rounded-lg">
                 <div className="grid grid-cols-4 w-full bg-cover md:bg-contain bg-center bg-no-repeat" style={{backgroundImage: "url(" + Kontakt_2 + ")"}}>
-                <div className="relative col-span-4 text-sm font-medium flex justify-center text-[#F01E82] text-[20px] py-4">Vi ringer up dig</div>
+                <div className="relative col-span-4 text-sm font-medium flex justify-center text-[#F01E82] text-[20px] py-4">Vi kontaktar dig</div>
                     {/* <div className="col-span-4 text-[#F01E82] flex justify-center text-[25px] font-bold">Fyll i dina information</div> */}
                     <div className="col-span-2  mx-4 flex justify-center h-[200px]">
                         <div className="grid grid-rows-2">
@@ -145,7 +145,7 @@ export default function CheckOut() {
                 </div>
             </div>
             <div className="relative col-span-3 mx-8 flex py-4 flex-col shadow-lg my-2 ease-in-out hover:shadow-2xl rounded-lg w-[350px] h-[600px] overflow-auto">
-                <h2 className="py-4 mb-6 border-b text-sm font-medium flex justify-center text-[#F01E82] text-[20px] font-lato">Produkter du valde</h2>
+                <h2 className="py-4 mb-6 border-b text-sm font-medium flex justify-center text-[#F01E82] text-[20px] font-lato">Valda produkter</h2>
                 <div className="mx-8">
                     {getCartProds()}
                 </div>

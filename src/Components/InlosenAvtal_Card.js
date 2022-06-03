@@ -4,6 +4,7 @@ import Inputfield_std from './Inputfield_std';
 import Btn_std from './Btn_std';
 
 import group_bg from '../Gfx/group_bg.png';
+import inlosenavtal_bg from '../Gfx/inlosenavtal_bg.png';
 
 export default function InlosenAvtal_Card(props) {
 
@@ -54,7 +55,7 @@ export default function InlosenAvtal_Card(props) {
 
   console.log(props)
   return (
-    <div className=" w-full h-[800px] bg-contain " style={{backgroundImage: "url(" + group_bg + ")"}}>
+    <div className=" w-full h-[800px] bg-contain " style={{backgroundImage: "url(" + inlosenavtal_bg + ")"}}>
 
       
       <div className={"h-[780px] lg:relative py-6 px-6 rounded-2xl transition duration-500 hover:shadow-2xl hover:bg-white max-w-xl mx-auto flex justify-center " + props.className}>
@@ -109,7 +110,7 @@ export default function InlosenAvtal_Card(props) {
               <input onChange={(e)=>{setPersonNumber(e.target.value)}} className= "mt-2 py-1 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border border-gray-200 rounded-md"/>
             </div>
             <div className="py-[43px]">
-                <button onClick={()=>sendEmail()} className="flex justify-center bg-gradient-to-tr from-[#F85DA7] via-[#FB58A5] to-[#F41F84] text-white py-[6px] px-4 rounded-md w-full" > Skicka direkt </button>
+                <button onClick={()=>sendEmail()} className="flex justify-center bg-gradient-to-tr bg-[#F01E82] text-white py-[6px] px-4 rounded-md w-full" > Skicka direkt </button>
             </div>
           </div>
         </div>

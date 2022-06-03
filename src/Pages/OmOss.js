@@ -16,44 +16,44 @@ import Kontakt_card from '../Components/Kontakt_card';
 export default function Home() {
   return(
     <Std_Master img={bild_1} inner={
-        <div className="grid grid-cols-4 mx-72 h-full rounded-lg py-12 gap-x-80 bg-contain bg-center bg-no-repeat" style={{backgroundImage: "url(" + Group_33 + ")"}}>
+        <div className="grid md:grid-cols-4 grid-cols-1 md:mx-72 big_screen:mx-[700px] mx-8 h-full rounded-lg py-12 md:gap-x-80 bg-contain bg-center bg-no-repeat" style={{backgroundImage: "url(" + Group_33 + ")"}}>
 
-          <div className="col-span-4 font-lato font-bold">
+          <div className="md:col-span-4 col-span-1 font-lato font-bold">
             <p className="text-[65px] flex justify-center">Om Oss</p>
-            <p className="text-[20px] flex justify-center text-gray-700">Ett sympatiskt och kompetent gäng som sätter service till kunden före allt.</p>
+            <p className="text-[20px] flex justify-center text-gray-700 text-center">Ett sympatiskt och kompetent gäng som sätter service till kunden före allt.</p>
           </div>
           
-          <div className="col-span-2 font-lato my-12">
-            <h2 className="text-[40px] flex justify-center">Bakgrund</h2>
+          <div className="md:col-span-2 col-span-1 font-lato my-12">
+            <h2 className="md:text-[40px] text-[25px] flex justify-center mb-4">Bakgrund</h2>
             <div className="flex justify-center ">
-              <p className="text-[15px] text-gray-700 ">Smart Cash grundades 2010 och är idag ett väletablerat bolag inom kassabranschen. Vi har genom åren byggt upp en gedigen kompetens för att tillgodose behovet av ett säkert och tillförlitligt betalsystem åt våra kunder.</p>
+              <p className="text-[15px] text-gray-700 text-center">Smart Cash grundades 2010 och är idag ett väletablerat bolag inom kassabranschen. Vi har genom åren byggt upp en gedigen kompetens för att tillgodose behovet av ett säkert och tillförlitligt betalsystem åt våra kunder.</p>
             </div>
           </div>
 
-          <div className="col-span-2 font-lato my-12">
-            <h2 className="text-[40px] flex justify-center">Affärside</h2>
+          <div className="md:col-span-2 col-span-1 font-lato my-12">
+            <h2 className="md:text-[40px] text-[25px] flex justify-center mb-4">Affärside</h2>
             <div className="flex justify-center ">
-              <p className="text-[15px] text-gray-700 ">Smart Cash vill erbjuda en unik kundupplevelse med förstklassig service och en trygghet för alla våra kunder oavsett om ni är en stor organisation eller ägare av en liten butik. Vår strävan är att erbjuda de absolut senaste funktionerna som marknaden efterfrågar och på ett effektivt sätt sänka våra kunders kostnader på deras betaltjänster. Vi tror på att underlätta för våra kunder genom att samla alla kostnader på och samma faktura för varje tjänst man behöver för ett komplett betalsystem, där av smidighet hela vägen från beställning till användandet av våra tjänster.</p>
+              <p className="text-[15px] text-gray-700 text-center">Smart Cash vill erbjuda en unik kundupplevelse med förstklassig service och en trygghet för alla våra kunder oavsett om ni är en stor organisation eller ägare av en liten butik. Vår strävan är att erbjuda de absolut senaste funktionerna som marknaden efterfrågar och på ett effektivt sätt sänka våra kunders kostnader på deras betaltjänster. Vi tror på att underlätta för våra kunder genom att samla alla kostnader på och samma faktura för varje tjänst man behöver för ett komplett betalsystem, där av smidighet hela vägen från beställning till användandet av våra tjänster.</p>
             </div>
           </div>
 
-          <div className="col-span-2 font-lato my-12">
-            <h2 className="text-[40px] flex justify-center">Mål/Vision</h2>
-            <div className="flex justify-center ">
-              <p className="text-[15px] text-gray-700 ">Kunden i fokus är en regel för oss. Vi jobbar alltid med långsiktiga relationer och alla våra kunder ska känna sig prioriterade. Till skillnad mot många av våra konkurrenter så är vi tillgängliga på ett helt annat sätt än vad våra kunders branscher är vana med och den linjen har vi tänkt att fortsätta på.</p>
+          <div className="md:col-span-2 col-span-1 font-lato my-12">
+            <h2 className="md:text-[40px] text-[25px] flex justify-center mb-4">Mål/Vision</h2>
+            <div className="flex justify-center">
+              <p className="text-[15px] text-gray-700 text-center">Kunden i fokus är en regel för oss. Vi jobbar alltid med långsiktiga relationer och alla våra kunder ska känna sig prioriterade. Till skillnad mot många av våra konkurrenter så är vi tillgängliga på ett helt annat sätt än vad våra kunders branscher är vana med och den linjen har vi tänkt att fortsätta på.</p>
             </div>
           </div>
 
-          <div className="col-span-2 font-lato my-12">
-            <h2 className="text-[40px] flex justify-center">Vår kompetens</h2>
-            <div className="flex justify-center ">
-              <p className="text-[15px] text-gray-700 ">Vi håller utbildningar med alla serviceteknikers kontinuerligt för att hålla dom uppdaterade inom nya lagar samt regler som tillkommer varje år. Vi består idag av ett team på 6st säljare samt 7st serviceteknikers. Hos oss utlovas en säkerhet för våra kunder!</p>
+          <div className="md:col-span-2 col-span-1 font-lato my-12">
+            <h2 className="md:text-[40px] text-[25px] flex justify-center mb-4">Vår kompetens</h2>
+            <div className="flex justify-center">
+              <p className="text-[15px] text-gray-700 text-center">Vi håller utbildningar med alla serviceteknikers kontinuerligt för att hålla dom uppdaterade inom nya lagar samt regler som tillkommer varje år. Vi består idag av ett team på 6st säljare samt 7st serviceteknikers. Hos oss utlovas en säkerhet för våra kunder!</p>
             </div>
           </div>
 
-          <div className="col-span-4 font-lato my-12">
-            <h2 className="text-[40px] flex justify-center">Vi lyssnar på våra kunder</h2>
-            <div className="flex justify-center ">
+          <div className="md:col-span-4 col-span-1 font-lato my-12">
+            <h2 className="md:text-[40px] text-[25px] flex justify-center mb-4">Vi lyssnar på våra kunder</h2>
+            <div className="flex justify-center">
               <p className="text-[15px] text-gray-700 text-center">Vi är inte omöjliga! När våra kunder har önskemål på funktioner så lyssnar vi och tar till oss det och i mån av tid så brukar vi framställa dom inom 1-3 månader. Vårt kassasystem är idag anpassat mot verksamheter som Restaurang Bar & Nattklubb, Livsmedelsbutiker & Kiosker, Skönhetssalonger & Frisörer, Kemtvättar, Servicebutiker och Klädbutiker men klarar självklart av andra verksamheter, så tveka inte på att höra av er för att få en professionell rådgivning över vad just du/ni behöver.</p>
             </div>
           </div>

@@ -11,6 +11,9 @@ import swal from 'sweetalert';
 
 export default function Product_card(props) {
 
+const [value,setValue] = useState();
+
+
 function sweetalertNotification(){
     swal({
         title: "Produkt added",
@@ -19,13 +22,16 @@ function sweetalertNotification(){
         button: "Aww yiss!",
         timer: 2000
         })
+        setTimeout(function(){
+            //window.location.reload(1);
+         }, 2000);
 }
 
     return (
         <NewCard>
         <div>
             <div className="font-lato">
-                        <div class="absolute transform bg-pink-400 text-center items-center pt-6 text-sm text-white font-semibold py-2 rounded-full top-[32px] w-[70px] h-[70px]">
+                        <div class="absolute transform bg-[#F01E82] text-center items-center pt-6 text-sm text-white font-semibold py-2 rounded-full top-[32px] w-[70px] h-[70px]">
                             {props.ribbon}
                         </div>
                 <div className="relative overflow-hidden py-4 mt-4 md:grid">
@@ -64,6 +70,11 @@ function sweetalertNotification(){
                                        products.push(customProduct);
                        
                                        setCookie("products",JSON.stringify(products));
+                                       //console.log(products.length)
+                                       /* setTimeout(function(){
+                                        window.location.reload(1);
+                                     }, 2000); */
+                                     
                                    }
                                    else{
                                         //there was no cookie :(
@@ -72,6 +83,7 @@ function sweetalertNotification(){
                                        prod.push(customProduct);
                                        setCookie("products",JSON.stringify(prod));
                                    }
+                                   props.update();
                                 }} className='text-black border-6 py-3 px-3 flex shadow-lg rounded-full cursor-pointer hover:-translate-y-1 hover:scale-110 ' to=""> <BiPlusMedical /></div>
                             </div>
                             {/* <div className="text-sm font-bold border-6 py-2 px-2 shadow-lg rounded-lg text-pink-500">

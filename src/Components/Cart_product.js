@@ -5,7 +5,7 @@ import { spliceCookie } from '../Components/CookieHandler';
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { BsTrash } from "react-icons/bs";
 
-import { getCookie , setCookie} from './CookieHandler';
+import { getCookie , setCookie, removeCookie} from './CookieHandler';
 
 function Increment(index){
     var cookie  = JSON.parse(getCookie("products"));
@@ -44,10 +44,38 @@ function Decrement(index){
 export default function Cart_product(props) {
     const [count, setCount] = useState(null)
 
+    /* function setNewCookie(){
+        spliceCookie(props.id);
+        console.log("Deleted")
+        var cookie  = JSON.parse(getCookie("products"));
+        console.log("Get")
+        setCookie("products",JSON.stringify(cookie));
+        console.log("Set")
+    } */
+
+
+     /* function setNewCookie(index){
+        var cookie  = JSON.parse(getCookie("products"));
+
+        console.log(cookie[index])
+        var newArr  = [];
+        cookie.splice(index, 1);
+
+        removeCookie("products");
+        var hehe = setCookie("products", JSON.stringify(cookie))
+
+        return hehe
+     } */
+
     useEffect(() => {
         setCount(props.count)
     }, []);
 
+    function update(){
+        //console.log(props)
+        props.updateList();
+    }
+    
     return (
         <div className="grid grid-cols-2 my-2 mx-1 py-2 z-50 shadow-lg ease-in-out hover:shadow-2xl rounded-lg">
             <div className="w-[130px] h-[130px] col-span-1 bg-contain bg-center bg-no-repeat mr-[140px]" style={{backgroundImage: "url(" + props.img + ")"}} />
@@ -66,7 +94,7 @@ export default function Cart_product(props) {
                     {/* <p className="font-bold">price:  {parseInt(props.price) * count  }</p> */}
                 </div>
                 <div className="flex justify-center">
-                    <p onClick={()=>{spliceCookie(props.id)}} className="px-4 py-2 cursor-pointer hover:-translate-y-1 hover:scale-110" ><div className="py-1"><BsTrash /> </div></p>
+                    <p onClick={()=>{spliceCookie(props.id);update()}} className="px-4 py-2 cursor-pointer hover:-translate-y-1 hover:scale-110" ><div className="py-1"><BsTrash /> </div></p>
                 </div>
             </div>
         </div>

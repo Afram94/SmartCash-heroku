@@ -19,8 +19,8 @@ export default function Desc() {
           
         </div>
         <div className='flex-wrap w-full justify-center mt-4 '>
-        <h2 class="text-lg sm:text-4xl font-extrabold tracking-tight lg:text-white text-gray-600 px-4 text-center font-lato" data-v-0dd2ab72=""> VAD ERBJUDER VI? </h2>
-        <p class="mt-4 text-lg sm:text-lg lg:text-white text-gray-600 font-medium px-4 text-center font-lato" data-v-0dd2ab72=""> Smart Cash är ett väletablerat bolag i kassabranschen och erbjuder de absolut senaste funktionerna som marknaden efterfrågar. Vi strävar alltid efter att ge våra kunder en unik kundupplevelse med förstklassig service, oavsett företagsstorlek. </p>
+        <h2 class="text-lg sm:text-4xl font-extrabold tracking-tight xl:text-white text-gray-600 px-4 text-center font-lato" data-v-0dd2ab72=""> VAD ERBJUDER VI? </h2>
+        <p class="mt-4 text-lg sm:text-lg xl:text-white text-gray-600 font-medium px-4 text-center font-lato" data-v-0dd2ab72=""> Smart Cash är ett väletablerat bolag i kassabranschen och erbjuder de absolut senaste funktionerna som marknaden efterfrågar. Vi strävar alltid efter att ge våra kunder en unik kundupplevelse med förstklassig service, oavsett företagsstorlek. </p>
         {/* <h2 class="text-lg sm:text-4xl font-extrabold tracking-tight text-black" data-v-0dd2ab72=""> VAD ERBJUDER VI? </h2>
         <p class="mt-4 text-lg sm:text-lg text-black font-medium" data-v-0dd2ab72=""> Smart Cash är ett väletablerat bolag i kassabranschen och erbjuder de absolut senaste funktionerna som marknaden efterfrågar. Vi strävar alltid efter att ge våra kunder en unik kundupplevelse med förstklassig service, oavsett företagsstorlek. </p> */}
           {/* <img src={Gasell_smartcash} style={{height: "5vw"}} />

@@ -22,6 +22,7 @@ import test_51 from "../../Gfx/test_51.png"
 import test_54 from "../../Gfx/test_54.png"
 import test_53 from "../../Gfx/test_53.png"
 import bild_1 from '../../Gfx/bild_1.png'
+import icon_img from '../../Gfx/icon_img.png'
 
 import NewCard from '../../Components/NewCard'
 import { FcOk } from "react-icons/fc";
@@ -38,7 +39,7 @@ export default function RestaurantAndCafe() {
             <div>
             <div className="grid gap-y-24">
                 <div className="grid grid-cols-5 w-full lg:px-48 items-center border-b gap-4">
-                    <div className="lg:col-span-2 col-span-5 px-2 mx-2 ">
+                    <div className="lg:col-span-2 col-span-5 px-2 mx-2 font-lato">
                     <p class="hidden md:block text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Ett kassasystem skapad för<br/> Restaurang, Bar Caféverksamhet!</p>
                             <p class="block md:hidden text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Ett kassasystem skapad för Restaurang, Bar Caféverksamhet!</p>
                             <div className="md:w-full mt-4">
@@ -50,7 +51,7 @@ export default function RestaurantAndCafe() {
 
                                 <div className="flex justify-end w-full py-8 relative">
                                 {/* <button type="button" className="" onClick={() => history(-1)} >he</button> */}
-                                <Link to="/kontakt" className='flex justify-center bg-gradient-to-tr from-[#F85DA7] via-[#FB58A5] to-[#F41F84] text-white py-[6px] px-4 rounded-md w-[180px]'> Boka demo </Link>
+                                <Link to="/kontakt" className='flex justify-center bg-gradient-to-tr bg-[#F01E82] text-white py-[6px] px-4 rounded-md w-[180px]'> Boka demo </Link>
                             </div>
             
                             </div>
@@ -177,41 +178,48 @@ export default function RestaurantAndCafe() {
                             <h2 className="text-4xl font-bold text-gray-700 sm:text-4xl font-lato">Kortterminal (Easy)</h2>
                         </div>
                         <div className=" px-6 py-4 grid grid-cols-10">
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Bordshantering</p>
 
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Sökfält inbyggt i kassan för att snabbt kunna söka upp kvitton, kunder & artiklar</p>
 
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Rapporter i pdf format skickat direkt till din mejladress & er ekonomiansvarig/revisor</p>
 
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Pay@Table (öppna upp notor vid bordet och ta betalt direkt i kortterminalen)</p>
 
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Artiklar kopplade till meddelanden</p>
 
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Bongsystem för köket (koppla hur många bongar du vill)</p>
+
+                            <div className="col-span-5 flex text-sm font-lato text-gray-500 my-4 justify-center items-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                                <Link to="/kontakt" className='flex justify-center bg-gradient-to-tr bg-[#F01E82] text-white py-[6px] px-4 rounded-md w-[180px] mx-1'> Boka demo </Link>
+                            </div>
+                            <div className="col-span-5 flex text-sm font-lato text-gray-500 my-4 justify-center items-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                                <Link to="/kontakt" className='flex justify-center bg-gradient-to-tr bg-[#F01E82] text-white py-[6px] px-4 rounded-md w-[180px] mx-1'> Få offert </Link>
+                            </div>
                         {/* <div className=" px-6 py-4">
                             <p className=" flex mt-1 text-sm font-lato text-gray-500">
-                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + test_50 + ")"}}></div> Bordshantering
+                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + icon_img + ")"}}></div> Bordshantering
                             </p>
                             <p className="flex mt-1 text-sm font-lato text-gray-500">
-                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + test_50 + ")"}}></div> Sökfält inbyggt i kassan för att snabbt kunna söka upp kvitton, kunder & artiklar
+                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + icon_img + ")"}}></div> Sökfält inbyggt i kassan för att snabbt kunna söka upp kvitton, kunder & artiklar
                             </p>
                             <p className="flex mt-1 text-sm font-lato text-gray-500">
-                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + test_50 + ")"}}></div> Rapporter i pdf format skickat direkt till din mejladress & er ekonomiansvarig/revisor
+                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + icon_img + ")"}}></div> Rapporter i pdf format skickat direkt till din mejladress & er ekonomiansvarig/revisor
                             </p>
                             <p className="flex mt-1 text-sm font-lato text-gray-500">
-                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + test_50 + ")"}}></div> Pay@Table (öppna upp notor vid bordet och ta betalt direkt i kortterminalen)
+                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + icon_img + ")"}}></div> Pay@Table (öppna upp notor vid bordet och ta betalt direkt i kortterminalen)
                             </p>
                             <p className="flex mt-1 text-sm font-lato text-gray-500">
-                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + test_50 + ")"}}></div> Artiklar kopplade till meddelanden
+                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + icon_img + ")"}}></div> Artiklar kopplade till meddelanden
                             </p>
                             <p className="flex mt-1 text-sm font-lato text-gray-500">
-                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + test_50 + ")"}}></div> Bongsystem för köket (koppla hur många bongar du vill)
+                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + icon_img + ")"}}></div> Bongsystem för köket (koppla hur många bongar du vill)
                             </p> */}
                         </div>
                     </div>
@@ -223,47 +231,49 @@ export default function RestaurantAndCafe() {
                             <h2 className="text-4xl font-bold text-gray-700 sm:text-4xl font-lato flex text-center">Kassa & kortterminal</h2>
                         </div>
                         <div className=" px-6 py-4 grid grid-cols-10">
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Drickshantering enligt Skatteverkets nya krav</p>
 
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Kortterminal kopplad till kassan</p>
 
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Kunddisplay där du kan lägga upp företagsreklam eller tillbehör för merförsäljning</p>
 
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Inbyggt fakturasystem</p>
 
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Backoffice</p>
                             
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Elektroniskt kvitto (välj att antingen mejla kvittot eller arkivera med ett knapptryck)</p>
+                            <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1"></p>
+                            <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1"></p>
 
                             <div className="col-span-5 flex text-sm font-lato text-gray-500 my-4 justify-center items-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-                                <Link to="/kontakt" className='flex justify-center bg-gradient-to-tr from-[#F85DA7] via-[#FB58A5] to-[#F41F84] text-white py-[6px] px-4 rounded-md w-[180px] mx-1'> Boka demo </Link>
+                                <Link to="/kontakt" className='flex justify-center bg-gradient-to-tr bg-[#F01E82] text-white py-[6px] px-4 rounded-md w-[180px] mx-1'> Boka demo </Link>
                             </div>
                             <div className="col-span-5 flex text-sm font-lato text-gray-500 my-4 justify-center items-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-                                <Link to="/kontakt" className='flex justify-center bg-gradient-to-tr from-[#F85DA7] via-[#FB58A5] to-[#F41F84] text-white py-[6px] px-4 rounded-md w-[180px] mx-1'> Få offert </Link>
+                                <Link to="/kontakt" className='flex justify-center bg-gradient-to-tr bg-[#F01E82] text-white py-[6px] px-4 rounded-md w-[180px] mx-1'> Få offert </Link>
                             </div>
                             {/* <p className="flex mt-1 text-sm font-lato text-gray-500">
-                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + test_50 + ")"}}></div> Drickshantering enligt Skatteverkets nya krav
+                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + icon_img + ")"}}></div> Drickshantering enligt Skatteverkets nya krav
                             </p>
                             <p className="flex mt-1 text-sm font-lato text-gray-500">
-                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + test_50 + ")"}}></div> Kortterminal kopplad till kassan
+                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + icon_img + ")"}}></div> Kortterminal kopplad till kassan
                             </p>
                             <p className="flex mt-1 text-sm font-lato text-gray-500">
-                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + test_50 + ")"}}></div> Kunddisplay där du kan lägga upp företagsreklam eller tillbehör för merförsäljning
+                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + icon_img + ")"}}></div> Kunddisplay där du kan lägga upp företagsreklam eller tillbehör för merförsäljning
                             </p>
                             <p className="flex mt-1 text-sm font-lato text-gray-500">
-                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + test_50 + ")"}}></div> Inbyggt fakturasystem
+                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + icon_img + ")"}}></div> Inbyggt fakturasystem
                             </p>
                             <p className="flex mt-1 text-sm font-lato text-gray-500">
-                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + test_50 + ")"}}></div> Backoffice
+                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + icon_img + ")"}}></div> Backoffice
                             </p>
                             <p className="flex mt-1 text-sm font-lato text-gray-500">
-                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + test_50 + ")"}}></div> Elektroniskt kvitto (välj att antingen mejla kvittot eller arkivera med ett knapptryck)
+                                <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + icon_img + ")"}}></div> Elektroniskt kvitto (välj att antingen mejla kvittot eller arkivera med ett knapptryck)
                             </p> */}
                         </div>
                     </div>
@@ -276,23 +286,31 @@ export default function RestaurantAndCafe() {
                         </div>
                         {/* <div className=" px-6 py-4"> */}
                         <div className=" px-6 py-4 grid grid-cols-10">
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Lagerhantering</p>
 
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Ordersystem med nummer (via skärm eller pappersformat)</p>
 
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Pucksystem där du kan ange pucknummer som skrivs ut på kvittot</p>
 
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Samla bongar för att skicka ordrar tillsammans</p>
 
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Bokningskalender med e-post bekräftelse</p>
 
-                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + test_50 + ")"}}></div>
+                            <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
                             <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1">Presentkort/Rabattkort & Lunchkort (pappersform eller plastkort)</p>
+                            <p className="col-span-9 flex text-sm font-lato text-gray-500 my-1"></p>
+
+                            <div className="col-span-5 flex text-sm font-lato text-gray-500 my-4 justify-center items-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                                <Link to="/kontakt" className='flex justify-center bg-gradient-to-tr bg-[#F01E82] text-white py-[6px] px-4 rounded-md w-[180px] mx-1'> Boka demo </Link>
+                            </div>
+                            <div className="col-span-5 flex text-sm font-lato text-gray-500 my-4 justify-center items-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                                <Link to="/kontakt" className='flex justify-center bg-gradient-to-tr bg-[#F01E82] text-white py-[6px] px-4 rounded-md w-[180px] mx-1'> Få offert </Link>
+                            </div>
                         
                             {/* <p className="flex mt-1 text-sm font-lato text-gray-500"> 
                                 <div className="bg-cover bg-no-repeat bg-center w-5 h-5 mb-[7px] pr-1 mr-1" style={{backgroundImage: "url(" + test_50 + ")"}}></div> <div className="mt-[3px] pr-1"></div> Lagerhantering

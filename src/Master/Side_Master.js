@@ -9,7 +9,7 @@ import { BsCart4 } from "react-icons/bs";
 import Smart_cash_text_Gradient from "../Gfx/Smart_cash_text_Gradient.svg";
 import Gasell_smartcash from "../Gfx/Gasell_smartcash.png";
 import UC_dark from "../Gfx/UC_dark.png";
-import Footer from "../Gfx/Footer.png";
+import Footer from "../Gfx/Footer.jpg";
 
 import { getCookie } from '../Components/CookieHandler';
 

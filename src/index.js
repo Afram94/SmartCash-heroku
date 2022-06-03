@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { getCookie, removeCookie, setCookie } from './Components/CookieHandler';
 
+if (!getCookie("products")){
+  setCookie("products",JSON.stringify([]));
+}
 ReactDOM.render(
   <React.StrictMode>
     <App />
