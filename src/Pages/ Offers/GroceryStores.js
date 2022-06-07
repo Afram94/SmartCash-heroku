@@ -14,6 +14,8 @@ import bild_1 from '../../Gfx/bild_1.png'
 import icon_img from '../../Gfx/icon_img.png'
 
 import kort_terminal_1 from '../../Gfx/kort_terminal_1.png'
+import GroceryStores_1 from '../../Gfx/GroceryStores_1.png'
+import GroceryStores_2 from '../../Gfx/GroceryStores_2.png'
 import test_50 from "../../Gfx/test_50.png"
 
 import { FcOk } from "react-icons/fc";
@@ -21,12 +23,12 @@ import { FcOk } from "react-icons/fc";
 
 export default function RestaurantAndCafe() {
     return (
-        <Std_Master Title="Livsmedel & Kiosk" img={bild_1} inner={
+        <Std_Master Title="Livsmedel & Kiosk" img={GroceryStores_2} inner={
             <div>
             <div className="grid gap-y-24">
             <div className="grid grid-cols-5 w-full lg:px-48 items-center border-b gap-4">
                     <div className="lg:col-span-2 col-span-5 px-2 mx-2 relative font-lato">
-                    <p class="hidden md:block text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Ett kassasystem framtaget för<br/> butiker inom skönhet & salong!</p>
+                    <p class="hidden md:block xl:text-[25px] 2xl:text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Ett kassasystem framtaget för<br/> butiker inom skönhet & salong!</p>
                             <p class="block md:hidden text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Ett kassasystem framtaget för butiker inom skönhet & salong!</p>
                             <div className="md:w-full mt-4">
                                 <h2 class="font-medium text-gray-500">
@@ -46,7 +48,7 @@ export default function RestaurantAndCafe() {
                             </div>
                     </div>
                     <div className="lg:col-span-3 col-span-5 ">
-                        <div className="col-span-1 md:h-[600px] h-[280px] bg-cover bg-no-repeat" style={{backgroundImage: "url(" + Enox_SmartCash_3 + ")"}}></div>
+                        <div className="col-span-1 2xl:h-[600px] xl:h-[350px] h-[280px] bg-cover bg-no-repeat" style={{backgroundImage: "url(" + Enox_SmartCash_3 + ")"}}></div>
                     </div>
                 </div>
 
@@ -144,7 +146,7 @@ export default function RestaurantAndCafe() {
                     <div className="relative lg:col-span-2 md:col-span-5 shadow-xl rounded-lg my-2 ease-in-out hover:shadow-2xl md:w-full w-[340px] mx-2 ">
                         <img className="bg-contain bg-center bg-no-repeat" src={kort_terminal_1}/>
                         <div className=" flex justify-center">
-                            <h2 className="text-3xl font-bold text-gray-700 sm:text-4xl text-center font-lato">Kortterminal (Easy)</h2>
+                            <h2 className="text-3xl font-bold text-gray-700 2xl:text-4xl text-center font-lato">Kortterminal (Easy)</h2>
                         </div>
                         <div className=" px-6 py-4 grid grid-cols-10">
                             <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
@@ -197,7 +199,7 @@ export default function RestaurantAndCafe() {
                     <div className="relative lg:col-span-2 md:col-span-5 shadow-xl rounded-lg my-2 ease-in-out hover:shadow-2xl md:w-full w-[340px] mx-2 ">
                         <img className="bg-contain bg-center bg-no-repeat" src={kort_terminal_1}/>
                         <div className=" flex justify-center">
-                            <h2 className="text-3xl font-bold text-gray-700 sm:text-4xl font-lato flex text-center">Kassa & kortterminal</h2>
+                            <h2 className="text-3xl font-bold text-gray-700 2xl:text-4xl font-lato flex text-center">Kassa & kortterminal</h2>
                         </div>
                         <div className=" px-6 py-4 grid grid-cols-10">
                             <div className="col-span-1 bg-cover bg-no-repeat bg-center w-5 h-5 mt-[5px] ml-2" style={{backgroundImage: "url(" + icon_img + ")"}}></div>
@@ -253,7 +255,7 @@ export default function RestaurantAndCafe() {
                     <div className="relative lg:col-span-2 md:col-span-5 shadow-xl rounded-lg my-2 ease-in-out hover:shadow-2xl md:w-full w-[340px] mx-2 lg:mx-2 md:mx-52 ">
                         <img className="bg-contain bg-center bg-no-repeat" src={kort_terminal_1}/>
                         <div className=" flex justify-center">
-                            <h2 className="text-3xl font-bold text-gray-700 sm:text-4xl font-lato">Card 3</h2>
+                            <h2 className="text-3xl font-bold text-gray-700 2xl:text-4xl font-lato">Card 3</h2>
                         </div>
                         {/* <div className=" px-6 py-4"> */}
                         <div className=" px-6 py-4 grid grid-cols-10">

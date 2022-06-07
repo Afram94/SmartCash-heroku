@@ -40,7 +40,7 @@ export default function RestaurantAndCafe() {
             <div className="grid gap-y-24">
                 <div className="grid grid-cols-5 w-full lg:px-48 items-center border-b gap-4">
                     <div className="lg:col-span-2 col-span-5 px-2 mx-2 font-lato">
-                    <p class="hidden md:block text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Ett kassasystem skapad för<br/> Restaurang, Bar Caféverksamhet!</p>
+                    <p class="hidden md:block xl:text-[25px] 2xl:text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl ">Ett kassasystem skapad för<br/> Restaurang, Bar Caféverksamhet!</p>
                             <p class="block md:hidden text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Ett kassasystem skapad för Restaurang, Bar Caféverksamhet!</p>
                             <div className="md:w-full mt-4">
                                 <h2 class="font-medium text-gray-500">
@@ -57,7 +57,7 @@ export default function RestaurantAndCafe() {
                             </div>
                     </div>
                     <div className="lg:col-span-3 col-span-5 ">
-                        <div className="col-span-1 md:h-[600px] h-[300px] bg-cover bg-no-repeat" style={{backgroundImage: "url(" + Enox_SmartCash_2 + ")"}}></div>
+                        <div className="col-span-1 md:h-[600px] xl:h-[500px] 2xl:h-[600px] h-[300px] bg-cover bg-no-repeat" style={{backgroundImage: "url(" + Enox_SmartCash_2 + ")"}}></div>
                     </div>
                     </div>
 

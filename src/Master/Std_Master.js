@@ -124,10 +124,13 @@ export default function Std_Master(props) {
             </div>
             <div className="flex flex-row justify-center pb-4 items-center col-start-2 col-span-3">
               {/* <div className="grid-cols-3 hidden lg:flex ml-24 justify-center items-center backdrop-blur-sm rounded-lg h-[40px] pt-1 mb-10"> */}
-              <div className="grid-cols-3 hidden lg:flex 2xl:ml-[700px] justify-enx items-center h-[40px] pt-1 mb-10 backdrop-blur-sm">
+              
+              <div className="safari_only grid-cols-3 hidden lg:flex 2xl:ml-[830px] xl:ml-[430px] 2xl:mb-[100px] xl:mb-[100px] justify-enx items-center h-[40px] pt-1 mb-10 blur-none">
                 {NavBar(false, () => {})}
                 </div>
-            </div>
+            
+
+              </div>
           </div>
         </div>
 
@@ -155,13 +158,13 @@ export default function Std_Master(props) {
         </div>
 
         {/* Page name */}
-        <div className='absolute left-22 -top-5 z-0 w-full justify-center text-center text-xl md:text-4xl lg:text-5xl xl:text-6xl text-white font-bold font-lato ' style={{marginTop: "12vw"}}> {/* right-[10vw] md:right-[15vw] lg:right-[150px] xl:right-[250px] */}
+        <div className='absolute left-22 sm:-top-5 top-10 z-0 w-full justify-center text-center text-xl md:text-4xl lg:text-5xl xl:text-6xl text-white font-bold font-lato ' style={{marginTop: "12vw"}}> {/* right-[10vw] md:right-[15vw] lg:right-[150px] xl:right-[250px] */}
           {props.Title}
         </div>
 
         {/* <img src={Smart_cash_gradientBg} className='w-full' resizeMode="repeat"/> */}
-        <div className='w-full h-[400px] bg-black bg-cover bg-no-repeat inline -skew-y-6 font-lato ' >
-          <img src={props.img} className='w-full h-[650px] big_screen:h-[850px]' />
+        <div className='w-full h-[400px] bg-black bg-cover bg-no-repeat inline -skew-y-6 font-lato' >
+          <img src={props.img} className='w-full  h-[250px] sm:h-[650px] big_screen:h-[850px]' />
         </div>
       </div>
       <div>
@@ -395,24 +398,24 @@ function NavBar(isSm, trigger)
         {/* <Link to="/restaurant-products" className="text-white mx-8 font-bold uppercase"> Restaurang-products </Link> */}
         
         <div className="flex flex-col">
-          <div className="text-white mx-3 font-bold uppercase cursor-pointer text-lg font-lato" onClick={() => {setToggle_products(!toggle_products); handleClick();}}>Produkter</div>
+          <div className="text-white mx-3 font-bold uppercase cursor-pointer text-[14px] my-[2px] font-lato" onClick={() => {setToggle_products(!toggle_products); handleClick();}}>Produkter</div>
           
           
             {/* Product */}
             <div class={"w-16 overflow-hidden inline-block " + ((showProductArrow) ? "block ": "hidden ") + css(styles.slideInUp)} >
-              <div class={"h-7 w-7 bg-white rotate-45 absolute top-[48px] left-[60px] " }></div>
+              <div class={"h-7 w-7 bg-white rotate-45 absolute top-[40px] left-[60px] " }></div>
             </div>
                 {/* Offers */}
             <div class={"w-16 overflow-hidden inline-block " + ((showOfferAnimation) ? "block ": "hidden ") + css(styles.slideInUp)} >
-              <div class={"h-7 w-7 bg-white rotate-45 absolute top-[48px] left-[200px]"}></div>
+              <div class={"h-7 w-7 bg-white rotate-45 absolute top-[40px] left-[180px]"}></div>
             </div>
           {/* <animated.div style={productAnimation}> */}
-            <div className="absolute top-[40px] right-[100px]">
-              <div className={"product_menu flex bg-white rounded-xl shadow-md h-auto w-[940px] my-4 py-2 " + ((toggle_products) ? "block " : "hidden ") + css(styles.slideInUp)}>
-                <Link to="/restaurant-products" className='text-black mx-6 font-bold uppercase flex justify-self-center font-lato'> <div className="w-6 h-6 mr-1 pt-1"> <MdOutlineLocalDining /> </div>       Restaurang & Cafe     </Link>
-                <Link to="/beauty-products" className='text-black mx-6 font-bold uppercase flex justify-self-center font-lato'> <div className="w-6 h-6 mr-1 pt-1"><MdOutlineVolunteerActivism/> </div>       Skönhet & Hälsa     </Link>
-                <Link to="/restaurant-products" className='text-black mx-6 font-bold uppercase flex justify-self-center font-lato'> <div className="w-6 h-6 mr-1 pt-1"><MdAddShoppingCart/> </div>      Livsmedel & Kiosk     </Link>
-                <Link to="/restaurant-products" className='text-black mx-6 font-bold uppercase flex justify-self-center font-lato'> <div className="w-6 h-6 mr-1 pt-1"> <MdOutlineLocalDining /> </div>       Alla produkter     </Link>
+            <div className="absolute top-[35px] right-[50px]">
+              <div className={"product_menu flex bg-white rounded-xl shadow-md h-auto w-[900px] my-4 py-2 " + ((toggle_products) ? "block " : "hidden ") + css(styles.slideInUp)}>
+                <Link to="/restaurant-products" className='text-black mx-6 font-bold text-[14px] uppercase flex justify-self-center font-lato'> <div className="w-6 h-6 mr-1 pt-1"> <MdOutlineLocalDining /> </div>       Restaurang & Cafe     </Link>
+                <Link to="/beauty-products" className='text-black mx-6 font-bold text-[14px] uppercase flex justify-self-center font-lato'> <div className="w-6 h-6 mr-1 pt-1"><MdOutlineVolunteerActivism/> </div>       Skönhet & Hälsa     </Link>
+                <Link to="/restaurant-products" className='text-black mx-6 font-bold text-[14px] uppercase flex justify-self-center font-lato'> <div className="w-6 h-6 mr-1 pt-1"><MdAddShoppingCart/> </div>      Livsmedel & Kiosk     </Link>
+                <Link to="/restaurant-products" className='text-black mx-6 font-bold text-[14px] uppercase flex justify-self-center font-lato'> <div className="w-6 h-6 mr-1 pt-1"> <MdOutlineLocalDining /> </div>       Alla produkter     </Link>
               </div>
             </div>
           {/* </animated.div> */}
@@ -420,13 +423,13 @@ function NavBar(isSm, trigger)
 
         
         <div className="flex flex-col">
-          <div className="text-white mx-3 font-bold uppercase cursor-pointer text-lg font-lato " onClick={() => {setToggle_offer(!toggle_offer); setShowOfferAnimation(!showOfferAnimation);}}>Erbjudande</div>
+          <div className="text-white mx-3 font-bold uppercase cursor-pointer text-[14px] my-[2px] font-lato " onClick={() => {setToggle_offer(!toggle_offer); setShowOfferAnimation(!showOfferAnimation);}}>Erbjudande</div>
           {/* <animated.div style={offerAnimation}> */}
-            <div className="mr-24 absolute top-[40px] right-[700px]">
-              <div className={"offer_menu flex bg-white rounded-xl shadow-md h-auto w-[700px] absolute my-4 py-2 " + ((toggle_offer) ? "block " : "hidden ") + css(styles.slideInUp)}>
-                <Link to="/restaurant-and-cafe" className='text-black mx-8 font-bold uppercase font-lato'>       Restaurang & Cafe    </Link>
-                <Link to="/beauty-and-health" className='text-black mx-8 font-bold uppercase font-lato'>       Skönhet & Hälsa    </Link>
-                <Link to="/grocery-stores" className='text-black mx-8 font-bold uppercase font-lato'>       Livsmedel & Kiosk    </Link>
+            <div className="mr-24 absolute top-[35px] right-[700px]">
+              <div className={"offer_menu flex bg-white rounded-xl shadow-md h-auto w-[650px] absolute my-4 py-2 " + ((toggle_offer) ? "block " : "hidden ") + css(styles.slideInUp)}>
+                <Link to="/restaurant-and-cafe" className='text-black mx-8 text-[14px] font-bold uppercase font-lato'>       Restaurang & Cafe    </Link>
+                <Link to="/beauty-and-health" className='text-black mx-8 text-[14px] font-bold uppercase font-lato'>       Skönhet & Hälsa    </Link>
+                <Link to="/grocery-stores" className='text-black mx-8 text-[14px] font-bold uppercase font-lato'>       Livsmedel & Kiosk    </Link>
               </div>
             </div>
           {/* </animated.div> */}
@@ -434,9 +437,9 @@ function NavBar(isSm, trigger)
         
           
       
-        <Link to="/inlosenavtal" className='text-white mx-3 font-bold uppercase text-lg font-lato'>       Inlösenavtal     </Link>
-        <Link to="/om_oss" className='text-white mx-3 font-bold uppercase w-20 text-lg font-lato'>      Om  oss        </Link>
-        <Link to="/kontakt" className='text-white mx-3 font-bold uppercase text-lg font-lato'>       Kontakt       </Link>
+        <Link to="/inlosenavtal" className='text-white mx-3 font-bold uppercase text-lg text-[14px] font-lato'>       Inlösenavtal     </Link>
+        <Link to="/om_oss" className='text-white mx-3 font-bold uppercase text-lg text-[14px] font-lato'>      Om  oss        </Link>
+        <Link to="/kontakt" className='text-white mx-3 font-bold uppercase text-lg text-[14px] font-lato'>       Kontakt       </Link>
         
       
       </div>

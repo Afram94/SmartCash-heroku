@@ -5,6 +5,7 @@ import Btn_std from './Btn_std';
 
 import group_bg from '../Gfx/group_bg.png';
 import inlosenavtal_bg from '../Gfx/inlosenavtal_bg.png';
+import inlosenavtal_bg_1 from '../Gfx/inlosenavtal_bg_1.png';
 
 export default function InlosenAvtal_Card(props) {
 
@@ -55,10 +56,10 @@ export default function InlosenAvtal_Card(props) {
 
   console.log(props)
   return (
-    <div className=" w-full h-[800px] bg-contain " style={{backgroundImage: "url(" + inlosenavtal_bg + ")"}}>
+    <div className=" w-full h-[800px] bg-contain " style={{backgroundImage: "url(" + inlosenavtal_bg_1 + ")"}}>
 
       
-      <div className={"h-[780px] lg:relative py-6 px-6 rounded-2xl transition duration-500 hover:shadow-2xl hover:bg-white max-w-xl mx-auto flex justify-center " + props.className}>
+      <div className={"h-[780px] lg:relative py-6 px-6 rounded-2xl transition duration-500 hover:shadow-2xl bg-white max-w-xl mx-auto flex justify-center " + props.className}> {/* hover:bg-white */}
         <div className="grid grid-cols-4 w-full gap-y-8 gap-x-6">
           <div className="col-span-4 h-auto text-center">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl font-lato">

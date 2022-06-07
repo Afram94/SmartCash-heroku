@@ -113,22 +113,22 @@ export default function Home() {
       <div className=" xl:block hidden absolute 2xl:top-[570px] 2xl:left-[1120px] xl:top-[580px] xl:left-[660px] big_screen:left-[2160px] big_screen:top-[760px] bg-no-repeat bg-cover w-[500px] h-[200px] text-bold text-[28px] font-lato ">
       
       
-        <div className="grid grid-cols-3 w-[700px] big_screen:w-[800px]">
+        <div className="grid grid-cols-3 w-[750px] big_screen:w-[800px]">
           <div className="col-span-1 border-r border-l font-lato text-gray-700">
             {/* <div className="flex justify-center items-center text-center"> <MdSentimentVerySatisfied /></div> */}
             <div className="flex justify-center items-center text-center text-[20px] big_screen:text-[30px]"> Aktiva kunder</div>
-            <div className="ml-[90px] text-[20px] big_screen:text-[30px]">{count}</div>
+            <div className="ml-[90px] text-[20px] big_screen:text-[30px] text-blue-500">{count} st</div>
           </div>
           
           <div className="col-span-1 border-r font-lato text-gray-700">
-            <div className="flex justify-center items-center text-center text-[20px] big_screen:text-[30px]">Antal transitioner</div>
-            <div className="ml-[80px] text-[20px] big_screen:text-[30px]">{transactionCount}</div>
+            <div className="flex justify-center items-center text-center text-[20px] big_screen:text-[30px]">Dagliga korttransktioner</div>
+            <div className="ml-[80px] text-[20px] big_screen:text-[30px] text-green-500">{transactionCount} st</div>
           </div>
           
           
           <div className="col-span-1 border-r font-lato text-gray-700">
-            <div className="flex justify-center items-center text-center text-[20px] big_screen:text-[30px]">Aktiva kunder</div>
-            <div className="ml-[90px] text-[20px] big_screen:text-[30px]">{count}</div>
+            <div className="flex justify-center items-center text-center text-[20px] big_screen:text-[30px]">Omsättning</div>
+            <div className="ml-[90px] text-[20px] big_screen:text-[30px] text-[#962896]">{count} Kr</div>
           </div>
           
         </div>
