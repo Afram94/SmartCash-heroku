@@ -41,7 +41,7 @@ export default function Std_Master(props) {
   const [navbar, setNavbar] = useState(false)
 
 
-  const changeBgColor = () => {
+  /* const changeBgColor = () => {
     if(window.scrollY >= 40){
       console.log(window.scrollY)
       setNavbar(true);
@@ -50,7 +50,7 @@ export default function Std_Master(props) {
     }
   };
 
-  window.addEventListener('scroll', changeBgColor);
+  window.addEventListener('scroll', changeBgColor); */
   
   /* useEffect(() => {
       // Anything in here is fired on component unmount.
