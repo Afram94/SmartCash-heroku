@@ -26,10 +26,10 @@ export default function RestaurantAndCafe() {
         <Std_Master Title="Livsmedel & Kiosk" img={GroceryStores_2} inner={
             <div>
             <div className="grid gap-y-24">
-            <div className="grid grid-cols-5 w-full lg:px-48 items-center border-b gap-4">
+            <div className="grid grid-cols-5 w-full xl:px-48 items-center border-b gap-4">
                     <div className="lg:col-span-2 col-span-5 px-2 mx-2 relative font-lato">
-                    <p class="hidden md:block xl:text-[25px] 2xl:text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Ett kassasystem framtaget för<br/> butiker inom skönhet & salong!</p>
-                            <p class="block md:hidden text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Ett kassasystem framtaget för butiker inom skönhet & salong!</p>
+                    <p class="hidden md:block xl:text-[25px] 2xl:text-3xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">Ett kassasystem framtaget för<br/> butiker inom skönhet & salong!</p>
+                            <p class="block md:hidden text-3xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">Ett kassasystem framtaget för butiker inom skönhet & salong!</p>
                             <div className="md:w-full mt-4">
                                 <h2 class="font-medium text-gray-500">
                                     I vårt kassasystem har vi inte bara tänkt på alla viktiga funktioner våra kunder efterfrågar utan har även <br/>
@@ -48,12 +48,12 @@ export default function RestaurantAndCafe() {
                             </div>
                     </div>
                     <div className="lg:col-span-3 col-span-5 ">
-                        <div className="col-span-1 2xl:h-[600px] xl:h-[350px] h-[280px] bg-cover bg-no-repeat" style={{backgroundImage: "url(" + Enox_SmartCash_3 + ")"}}></div>
+                        <div className="col-span-1 md:h-[470px] 2xl:h-[600px] xl:h-[350px] h-[280px] bg-cover bg-no-repeat" style={{backgroundImage: "url(" + Enox_SmartCash_3 + ")"}}></div>
                     </div>
                 </div>
 
                 <div className="bg-gray-50 bg-contain bg-center"> {/* style={{backgroundImage: "url(" + bg_1 + ")"}} */}
-                    <div className="grid md:grid-cols-2 grid-cols-1 lg:mx-60 py-8">
+                    <div className="grid md:grid-cols-2 grid-cols-1 xl:mx-60 py-8">
                     <div className="md:col-span-2 col-span-1 border-r border-dashed h-[100px] font-bold flex justify-center py-8 text-3xl">FUNKTIONER</div>
                         <div className="grid-cols-1 ">
                             <div className="grid grid-rows-3">
@@ -141,7 +141,7 @@ export default function RestaurantAndCafe() {
             </div>
 
             <div className="flex justify-center">
-            <div className="grid grid-cols-1 lg:grid-cols-6 md:grid-cols-10 pt-14 lg:px-48 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-6 md:grid-cols-10 pt-14 xl:px-48 gap-8">
                 <div className="lg:col-span-6 md:col-span-10 col-span-1 h-[100px] font-bold flex justify-center py-8 text-3xl font-lato ">Paketer</div>
                     <div className="relative lg:col-span-2 md:col-span-5 shadow-xl rounded-lg my-2 ease-in-out hover:shadow-2xl md:w-full w-[340px] mx-2 ">
                         <img className="bg-contain bg-center bg-no-repeat" src={kort_terminal_1}/>

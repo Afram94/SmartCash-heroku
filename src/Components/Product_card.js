@@ -43,7 +43,7 @@ function sweetalertNotification(){
                     </div>
                     {/* <div class="absolute left-0 top-0 h-16 w-16 bg-pink-400">01</div> */}
                     <div className="w-full h-full flex justify-center items-center mb-4 col-span-1 bg-cover bg-center">
-                        <img className=" w-40 h-40" src={props.img} />
+                        <img className=" w-40 h-40 object-contain" src={props.img} />
                     </div>
                 </div>
                 <div>

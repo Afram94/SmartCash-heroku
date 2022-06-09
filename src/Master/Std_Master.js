@@ -37,8 +37,20 @@ export default function Std_Master(props) {
   
   const [isSm, setIsSm] = useState(false)
   const [mobileNav, setMobileNav] = useState(false)
-   
 
+  const [navbar, setNavbar] = useState(false)
+
+
+  const changeBgColor = () => {
+    if(window.scrollY >= 40){
+      console.log(window.scrollY)
+      setNavbar(true);
+    }else{
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener('scroll', changeBgColor);
   
   /* useEffect(() => {
       // Anything in here is fired on component unmount.
@@ -117,15 +129,15 @@ export default function Std_Master(props) {
         {/* </div> */}
 
         
-        <div className="absolute w-full py-4 items-center justify-center flex-wrap">
+        <div className="absolute w-full py-4 items-center justify-center flex-wrap ">
           <div className="grid justify-center w-full col-start-1 col-end-4 grid-cols-4">
             <div className="col-span-1 w-full grid-cols-3 py-4 px-8 xl:px-4 hidden lg:flex justify-center items-center ">
-            <Link to="/"><img src={Logo_10}  className='col-span-1 h-[130px]'  /></Link>
+              <Link to="/"><img src={Logo_10}  className='col-span-1 h-[120px]'  /></Link>
             </div>
             <div className="flex flex-row justify-center pb-4 items-center col-start-2 col-span-3">
               {/* <div className="grid-cols-3 hidden lg:flex ml-24 justify-center items-center backdrop-blur-sm rounded-lg h-[40px] pt-1 mb-10"> */}
               
-              <div className="safari_only grid-cols-3 hidden lg:flex 2xl:ml-[830px] xl:ml-[430px] 2xl:mb-[100px] xl:mb-[100px] justify-enx items-center h-[40px] pt-1 mb-10 blur-none">
+              <div className={"safari_only grid-cols-3 hidden lg:flex 2xl:ml-[830px] xl:ml-[430px] 2xl:mb-[100px] xl:mb-[100px] justify-enx items-center h-[40px] pt-1 mb-10 blur-none"}>
                 {NavBar(false, () => {})}
                 </div>
             
@@ -136,7 +148,7 @@ export default function Std_Master(props) {
 
         {/* Navbar Mobile */}
         <div className='absolute w-full grid-cols-3 xl:px-4 flex lg:hidden '>
-          <Link to="/"><img src={logo} className='absolute my-4 mx-8 z-0' style={{height: "55px"}} /></Link>
+          <Link to="/"><img src={Logo_10} className='absolute my-4 mx-8 z-0' style={{height: "55px"}} /></Link>
           <div className='w-full '>
             {/* <IoIosArrowDown className='absolute right-0 my-4 mx-6 ' color='white' size={40} onClick={() => {setMobileNav(!mobileNav)}} /> */}
             
@@ -158,7 +170,7 @@ export default function Std_Master(props) {
         </div>
 
         {/* Page name */}
-        <div className='absolute left-22 sm:-top-5 top-10 z-0 w-full justify-center text-center text-xl md:text-4xl lg:text-5xl xl:text-6xl text-white font-bold font-lato ' style={{marginTop: "12vw"}}> {/* right-[10vw] md:right-[15vw] lg:right-[150px] xl:right-[250px] */}
+        <div className='absolute left-22 top-[40px] lg:top-[60px] z-0 w-full justify-center text-center text-xl md:text-4xl lg:text-5xl xl:text-6xl text-white font-bold font-lato ' style={{marginTop: "12vw"}}> {/* right-[10vw] md:right-[15vw] lg:right-[150px] xl:right-[250px] */}
           {props.Title}
         </div>
 

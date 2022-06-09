@@ -58,6 +58,7 @@ export default function Home() {
 
   const [count, setCount] = useState(0);
   const [transactionCount, setTransactionCount] = useState(950000);
+  const [revenue, setRevenue] = useState(950000);
   const [get_x, setGet_x] = useState(0)
 
   function ActiveCustomer(){
@@ -82,19 +83,28 @@ export default function Home() {
   }
 
   function Transition(){
-    var initialDate = new Date(-700, 10, 4);
-    var now = Date.now();
-    var difference = now - initialDate;
-    var millisecondsPerDay = 24 * 60 * 60 * 1000;
-    var daysSince = Math.floor(difference / millisecondsPerDay);
+    const list1=[1,4,7,10,13,16,19,22,25,28,31];
+    const list2=[2,5,8,11,14,17,20,23,26,29];
+    const list3=[3,6,9,12,15,18,21,24,27,30];
+    var endpoint=700000
+    var now = new Date().getDate();
 
-
-    var timesRun = 0;
+    console.log(now)
+    if (list1.includes(now)){
+      endpoint=1000000
+    }
+    if (list2.includes(now)){
+      endpoint=1200000
+    }
+    if (list3.includes(now)){
+      endpoint=900000
+    }
+    var timesRun = 50000;
     var interval = setInterval(function(){
-        timesRun += 1822;
-        if(timesRun >= daysSince){
+        timesRun += 10000;
+        if(timesRun >= endpoint){
             clearInterval(interval);
-        }else if(timesRun > 1100000){ // to stop the infinite loop in case we have a bug
+        }else if(timesRun > 1300000){ // to stop the infinite loop in case we have a bug
           clearInterval(interval);
         }
         setTransactionCount(timesRun)
@@ -102,9 +112,41 @@ export default function Home() {
     }, ); 
   }
 
+  function Revenue(){
+    const list1=[1,4,7,10,13,16,19,22,25,28,31];
+    const list2=[2,5,8,11,14,17,20,23,26,29];
+    const list3=[3,6,9,12,15,18,21,24,27,30];
+    var endpoint=700000
+    var now = new Date().getDate();
+
+    console.log(now)
+    if (list1.includes(now)){
+      endpoint=5000000
+    }
+    if (list2.includes(now)){
+      endpoint=7000000
+    }
+    if (list3.includes(now)){
+      endpoint=9000000
+    }
+    var timesRun = 2000000;
+    var interval = setInterval(function(){
+        timesRun += 25000;
+        if(timesRun >= endpoint){
+            clearInterval(interval);
+        }else if(timesRun > 13000000){ // to stop the infinite loop in case we have a bug
+          clearInterval(interval);
+        }
+        setRevenue(timesRun)
+        //do whatever here..
+    }, ); 
+  }
+
   useEffect(() => {
     ActiveCustomer();
     Transition();
+    Revenue();
+    
   },[]);
 
   return(
@@ -128,7 +170,7 @@ export default function Home() {
           
           <div className="col-span-1 border-r font-lato text-gray-700">
             <div className="flex justify-center items-center text-center text-[20px] big_screen:text-[30px]">Omsättning</div>
-            <div className="ml-[90px] text-[20px] big_screen:text-[30px] text-[#962896]">{count} Kr</div>
+            <div className="ml-[70px] text-[20px] big_screen:text-[30px] text-[#962896]">{revenue} Kr</div>
           </div>
           
         </div>
@@ -199,7 +241,7 @@ export default function Home() {
         </div> */}
       </div>
       <div className='w-full lg:h-[450px] h-[250px] xl:hidden grid'>
-        <div className='w-full h-full lg:w-full lg:h-[420px] bg-contain md:bg-cover bg-no-repeat rounded-t-2xl z-0 flex items-center justify-center' /* iphone_12_pro:w-[390px] iphone_12_pro:h-[390px] */
+        <div className='w-full h-full lg:w-full lg:h-[420px] bg-contain md:bg-cover bg-no-repeat rounded-t-2xl z-0 flex items-center justify-center iphone_12_pro:w-[390px] iphone_12_pro:h-[390px]' /* iphone_12_pro:w-[390px] iphone_12_pro:h-[390px] */
              style={{backgroundImage: "url(" + bild_enox + ")"}}/>
         <div className="z-10 absolute mt-14 lg:mt-[400px] flex justify-center w-full">
           <Desc />
@@ -208,7 +250,7 @@ export default function Home() {
 
       <div className='h-24 md:h-44' />
 
-      <div className="lg:my-12 border-b-2">
+      {/* <div className="lg:my-12 border-b-2">
         <h2 class="relative text-center text-lg sm:text-4xl uppercase font-extrabold text-gray-900 tracking-tight mt-44 md:mt-16 font-lato"> Några av våra kunder </h2>
         
         <div className="grid xl:grid-cols-9 sm:grid-cols-5 grid-cols-2 lg:mx-48 mx-12 my-12 sm:gap-x-12 gap-x-8 ">
@@ -254,7 +296,7 @@ export default function Home() {
           </div>
           
         </div>
-      </div>
+      </div> */}
       {/* <div className="border-b-2 my-12">
         
         
@@ -281,7 +323,7 @@ export default function Home() {
       </div> */}
 
       {/* <div className='relative w-full h-[800px] md:h-[1200px] grid grid-cols-4 '> */}
-      <div className='lg:block hidden'>
+      <div className='lg:block hidden mt-44 md:mt-16'>
       <div className=' grid grid-rows-3 relative w-full h-[800px] md:h-[1000px]'>
       {/* <div className='col-span-2 '>afram</div> */}
       <div className='row-span-2'>
@@ -383,7 +425,7 @@ export default function Home() {
 
 
       {/* Mobile */}
-    <div className='lg:hidden grid grid-cols-1'>
+    <div className='lg:hidden grid grid-cols-1 mt-44 md:mt-16'>
     <div className='col-span-1 rounded-lg mx-4 my-24 '>
           <div className='relative w-full h-full col-span-2 flex justify-center items-center flex-col' >
             <img src={Brinto_gradient} className='w-[240px] h-[240px]' />
@@ -466,13 +508,60 @@ export default function Home() {
           </dd>
         </div>
     </div>
+    
 
 
 
     </div>
 
 
-
+    <div className="lg:my-12 border-b-2">
+        <h2 class="relative text-center text-lg sm:text-4xl uppercase font-extrabold text-gray-900 tracking-tight mt-44 md:mt-16 font-lato"> Några av våra kunder </h2>
+        
+        <div className="grid xl:grid-cols-9 sm:grid-cols-5 grid-cols-2 lg:mx-48 mx-12 my-12 sm:gap-x-12 gap-x-8 ">
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_1 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_2 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_3 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_4 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_5 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_6 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center" style={{backgroundImage: "url(" + kund_7 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-contain bg-no-repeat bg-center" style={{backgroundImage: "url(" + kund_8 + ")"}}/>
+          </div>
+          
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-contain bg-no-repeat bg-center" style={{backgroundImage: "url(" + kund_9 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center big_screen:ml-[850px] xl:ml-[450px] md:hidden 2xl:block" style={{backgroundImage: "url(" + kund_10 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-contain bg-no-repeat bg-center big_screen:ml-[850px] xl:ml-[450px] sm:ml-[150px] md:hidden 2xl:block" style={{backgroundImage: "url(" + kund_11 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-contain bg-no-repeat bg-center big_screen:ml-[850px] xl:ml-[450px] sm:ml-[150px] bg-black md:hidden 2xl:block" style={{backgroundImage: "url(" + kund_12 + ")"}}/>
+          </div>
+          <div className="col-span-1 my-1">
+            <div className="border-2 w-[110px] h-[110px] sm:w-[100px] my-2 sm:h-[100px] rounded-full bg-cover bg-center big_screen:ml-[850px] xl:ml-[450px] sm:ml-[150px] ml-[70px] md:hidden 2xl:block" style={{backgroundImage: "url(" + kund_13 + ")"}}/>
+          </div>
+          
+        </div>
+      </div>
 
 
 
