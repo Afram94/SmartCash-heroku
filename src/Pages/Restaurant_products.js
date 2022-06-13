@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
-import download from "../Gfx/download.jpeg";
+import paket_1 from "../Gfx/paket_1.png";
+import paket_2 from "../Gfx/paket_2.png";
+import paket_3 from "../Gfx/paket_3.png";
 import Kassa from "../Gfx/Kassa.png";
 import westpay_1 from "../Gfx/westpay_1.png";
 import Enox_Kassa from "../Gfx/Enox_Kassa.png";
@@ -56,11 +58,12 @@ export default class Restaurant_products extends React.Component {
                     <div className="md:flex sm:flex flex-wrap -z-50 max-w-7xl mx-auto pl-4 pr-8 sm:px-6 lg:px-8 justify-center items-center">
                         
     
-                        <Product_card update={()=>{this.setState({temp:"xd"})}} img={westpay_1} price="100Kr" title="Westpay c-100" ribbon="200Kr" description="molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium"/>
-                        <Product_card update={()=>{this.setState({temp:"xd"})}} img={westpay_1} price="200Kr" title="Westpay c-100" ribbon="200Kr" description="molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium"/>
+                        <Product_card update={()=>{this.setState({temp:"xd"})}} img={paket_1} price="100Kr" title="Paket 1" ribbon="200Kr" description={<div>Kassaregister Sam4s ER-260 <br /> Kontrollenhet <br /> Kassalåda</div>}/>
+
+                        <Product_card update={()=>{this.setState({temp:"xd"})}} img={paket_2} price="200Kr" title="Paket 2" ribbon="200Kr" description={<div>Kassaregister Sam4s ER-260 <br /> Kortterminal Smart C-10<br />Kontrollenhet <br />Kassalåda</div>}/>
                         <Product_card update={()=>{this.setState({temp:"xd"})}} img={westpay_1} price="100Kr" title="Westpay c-100" ribbon="200Kr" description="molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium"/>
                         <Product_card update={()=>{this.setState({temp:"xd"})}} img={Kassa} price="100Kr" title="Kassa 4" ribbon="200Kr" description="molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium"/>
-                        <Product_card update={()=>{this.setState({temp:"xd"})}} img={Kassa} price="100Kr" title="Kassa 5" ribbon="200Kr" description="molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium"/>
+                        <Product_card update={()=>{this.setState({temp:"xd"})}} img={paket_3} price="100Kr" title="Paket 3" ribbon="200Kr" description="molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium"/>
                         <Product_card update={()=>{this.setState({temp:"xd"})}} img={Kassa} price="110Kr" title="Kassa 6" ribbon="200Kr" description="molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium"/>
                         <Product_card update={()=>{this.setState({temp:"xd"})}} img={Kassa} price="100Kr" title="Kassa 7" ribbon="200Kr" description="molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium"/>
                         <Product_card update={()=>{this.setState({temp:"xd"})}} img={Kassa} price="100Kr" title="all in one kassa" ribbon="200Kr" description="molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium"/>

@@ -240,8 +240,8 @@ export default function Home() {
         
         </div> */}
       </div>
-      <div className='w-full lg:h-[450px] h-[250px] xl:hidden grid'>
-        <div className='w-full h-full lg:w-full lg:h-[420px] bg-contain md:bg-cover bg-no-repeat rounded-t-2xl z-0 flex items-center justify-center iphone_12_pro:w-[390px] iphone_12_pro:h-[390px]' /* iphone_12_pro:w-[390px] iphone_12_pro:h-[390px] */
+      <div className='w-full lg:h-[450px] h-[280px] xl:hidden grid'> {/* h-[250px] */}
+        <div className='w-full h-full bg-contain md:bg-cover bg-no-repeat rounded-t-2xl z-0 flex items-center justify-center' /* iphone_12_pro:w-[390px] iphone_12_pro:h-[390px]  lg:w-full lg:h-[420px]*/
              style={{backgroundImage: "url(" + bild_enox + ")"}}/>
         <div className="z-10 absolute mt-14 lg:mt-[400px] flex justify-center w-full">
           <Desc />

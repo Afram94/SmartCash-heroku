@@ -307,7 +307,7 @@ class GetSideBar extends React.Component
     }
   
     return (
-      <div className="fixed w-full h-full z-0">
+      <div className="fixed w-full h-full z-0 ml-9 sm:ml-0">
         <div className="cursor-pointer z-50 rounded-full absolute bottom-10 right-10 w-[50px] h-[50px] bg-white shadow-md flex items-center justify-center " onClick={()=>{this.setState({isCartOpen:true})}}>
           
           <div className="">
